@@ -59,8 +59,9 @@ int main(int argc, char *argv[])
     Mat biggest_contour;
 
     namedWindow("debug", CV_WINDOW_AUTOSIZE);
-    const int FRAME_W = 160;
-    const int FRAME_H = 120;
+    namedWindow("360 Lens", CV_WINDOW_AUTOSIZE);
+    const int FRAME_W = 160*3;
+    const int FRAME_H = 120*3;
  
     BackgroundSubtractorMOG2 bg;
     vector<vector<Point> > contours;
@@ -98,6 +99,7 @@ int main(int argc, char *argv[])
         cap >> frame;
         cout << "Frame number: " <<frame_count << endl;
         
+        imshow("360 Lens", frame);
         cvtColor(frame, gray, CV_BGR2GRAY); //grayscale the frame
         bg.operator()(gray,fore);           //get the binary foreground image
         
