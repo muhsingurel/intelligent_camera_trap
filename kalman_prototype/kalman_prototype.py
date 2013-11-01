@@ -20,7 +20,7 @@ bg_mog = cv2.BackgroundSubtractorMOG()
 # specify parameters
 random_state = np.random.RandomState(0)
 transition_matrix = [[1, 0], 
-                     [1, 1]]
+                     [0.001, 1]]
 
 transition_offset = [0, 0]
 observation_matrix = [[1, 0], [0, 0]] 
