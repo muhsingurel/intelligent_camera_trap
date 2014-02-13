@@ -3,8 +3,8 @@
 
 
 
-#define MISSING_HEARTBEAT_TIME_THRESHOLD 10
-#define MAXIMUM_HEARTBEAT_TIME          360
+#define MISSING_HEARTBEAT_TIME_THRESHOLD 30
+#define MAXIMUM_HEARTBEAT_TIME          3600
 
 
 volatile static unsigned int heart_beat_inactive_time_in_S = MISSING_HEARTBEAT_TIME_THRESHOLD;
